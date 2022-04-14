@@ -13,25 +13,25 @@
   <main class="generator">
     <div class="generator__container _container">
       <h1 class="generator__title">Генератор паролей</h1>
-      <h2 class="generator__password">Сгенерированный пароль</h2>
+      <h2 class="generator__result"></h2>
 
       <ul class="generator__optiions">
-        <li class="generator__option"> <label for="password-length">Длина пароля</label>
-          <input type="number" id="password-length" name="password-length">
+        <li class="generator__option"> <label for="password-length">Длина пароля:</label>
+          <input type="number" id="password-length" name="password-length" value="10" min="10" max="20">
         </li>
         <li class="generator__option"> <label for="lower-case">Строчные буквы</label>
-          <input type="checkbox" id="lower-case" name="lower-case">
+          <input class="custom-checkbox" checked type="checkbox" id="lower-case" name="lower-case">
         </li>
         <li class="generator__option"> <label for="upper-case">Заглавные буквы</label>
-          <input type="checkbox" id="upper-case" name="upper-case">
+          <input checked type="checkbox" id="upper-case" name="upper-case">
         </li>
         <li class="generator__option">
           <label for="symbols">Символы</label>
-          <input type="checkbox" id="symbols" name="symbols">
+          <input checked type="checkbox" id="symbols" name="symbols">
         </li>
         <li class="generator__option">
           <label for="numbers">Цифры</label>
-          <input type="checkbox" id="numbers" name="numbers">
+          <input checked type="checkbox" id="numbers" name="numbers">
         </li>
       </ul>
       <button class="generator__button">Сгенерировать новый пароль</button>
