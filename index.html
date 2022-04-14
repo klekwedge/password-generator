@@ -27,37 +27,49 @@
 </head>
 
 <body>
-  <main class="generator">
-    <div class="generator__container _container">
-      <h1 class="generator__title">Генератор паролей</h1>
-      <h2 class="generator__result"></h2>
+  <div class="_wrapper">
+    <main class="generator">
+      <div class="generator__container _container">
+        <h1 class="generator__title">Генератор паролей</h1>
+        <h2 class="generator__result"></h2>
 
-      <ul class="generator__optiions">
-        <li class="generator__option"> <label for="password-length">Длина пароля:</label>
-          <input type="number" id="password-length" name="password-length" value="10" min="1" max="20">
-        </li>
-        <li class="generator__option">
-          <input class="custom-checkbox" checked type="checkbox" id="lower-case" name="lower-case">
-          <label for="lower-case">Строчные буквы</label>
+        <ul class="generator__optiions">
+          <li class="generator__option"> <label for="password-length">Длина пароля:</label>
+            <input type="number" id="password-length" name="password-length" value="10" min="1" max="20">
+          </li>
+          <li class="generator__option">
+            <input class="custom-checkbox" checked type="checkbox" id="lower-case" name="lower-case">
+            <label for="lower-case">Строчные буквы</label>
 
+          </li>
+          <li class="generator__option">
+            <input class="custom-checkbox" checked type="checkbox" id="upper-case" name="upper-case">
+            <label for="upper-case">Заглавные буквы</label>
+          </li>
+          <li class="generator__option">
+            <input class="custom-checkbox" checked type="checkbox" id="symbols" name="symbols">
+            <label for="symbols">Символы</label>
+          </li>
+          <li class="generator__option">
+            <input class="custom-checkbox" checked type="checkbox" id="numbers" name="numbers">
+            <label for="numbers">Цифры</label>
+          </li>
+        </ul>
+        <button class="generator__button">Сгенерировать пароль</button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a class="footer__link" href="https://github.com/klekwedge" target="_blank">GitHub</a>
         </li>
-        <li class="generator__option">
-          <input class="custom-checkbox" checked type="checkbox" id="upper-case" name="upper-case">
-          <label for="upper-case">Заглавные буквы</label>
-        </li>
-        <li class="generator__option">
-          <input class="custom-checkbox" checked type="checkbox" id="symbols" name="symbols">
-          <label for="symbols">Символы</label>
-        </li>
-        <li class="generator__option">
-          <input class="custom-checkbox" checked type="checkbox" id="numbers" name="numbers">
-          <label for="numbers">Цифры</label>
+        <li class="footer__item">
+          <span>© 2022 by Andrey Antonov</span>
         </li>
       </ul>
-      <button class="generator__button">Сгенерировать пароль</button>
-    </div>
-
-  </main>
+    </footer>
+  </div>
   <script src="js/script.js"></script>
 </body>
 

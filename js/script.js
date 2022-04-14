@@ -6,7 +6,7 @@ generatePassword();
 buttonNewPassword.addEventListener("click", generatePassword);
 
 const inputNumber = document.querySelector("input[type=number]");
-inputNumber.addEventListener("input", (e) => {
+inputNumber.addEventListener("input", () => {
   const value = +inputNumber.value;
   if (value > 20) {
     inputNumber.value = 20;
@@ -22,13 +22,14 @@ function generateRandomNumber(min, max) {
 
 function generatePassword() {
   const passwordLength = document.querySelector("#password-length").value;
-  console.log(passwordLength);
+
   const lowerCaseOption = document.querySelector("#lower-case").checked;
   const UpperCaseOption = document.querySelector("#upper-case").checked;
   const symbolsOption = document.querySelector("#symbols").checked;
   const numbersOption = document.querySelector("#numbers").checked;
 
   if (lowerCaseOption + UpperCaseOption + symbolsOption + numbersOption == 0) {
+    resultPassword.textContent = "Вы не выбрали ни один параметр";
     return;
   }
   if (passwordLength === '') {
