@@ -230,6 +230,12 @@ button:focus {
   border-radius: 5px;
 }
 
+@media (max-width: 650px) {
+  .generator__container {
+    padding: 50px 40px 50px 40px;
+  }
+}
+
 @media (max-width: 580px) {
   .generator__container {
     padding: 50px 20px 50px 20px;
