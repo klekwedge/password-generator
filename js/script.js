@@ -8,8 +8,8 @@ buttonNewPassword.addEventListener("click", generatePassword);
 const inputNumber = document.querySelector("input[type=number]");
 inputNumber.addEventListener("input", (e) => {
   const value = +inputNumber.value;
-  if (value > 40) {
-    inputNumber.value = 25;
+  if (value > 20) {
+    inputNumber.value = 20;
   }
      else if (value < 1) {
       inputNumber.value = '';
@@ -31,10 +31,10 @@ function generatePassword() {
   if (lowerCaseOption + UpperCaseOption + symbolsOption + numbersOption == 0) {
     return;
   }
-//   if (passwordLength <= 0 || passwordLength > 25) {
-//     resultPassword.textContent = "Неверное число, введите число от 1 до 20";
-//     return;
-//   }
+  if (passwordLength === '') {
+    resultPassword.textContent = "Введите число от 1 до 20";
+    return;
+  }
 
   let result = "";
   for (let i = 0; i < passwordLength; i++) {
