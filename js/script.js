@@ -1,19 +1,18 @@
-const buttonNewPassword = document.querySelector(".generator__button");
-const resultPassword = document.querySelector(".generator__result");
+const buttonNewPassword = document.querySelector('.generator__button');
+const resultPassword = document.querySelector('.generator__result');
 
 generatePassword();
 
-buttonNewPassword.addEventListener("click", generatePassword);
+buttonNewPassword.addEventListener('click', generatePassword);
 
-const inputNumber = document.querySelector("input[type=number]");
-inputNumber.addEventListener("input", () => {
+const inputNumber = document.querySelector('input[type=number]');
+inputNumber.addEventListener('input', () => {
   const value = +inputNumber.value;
   if (value > 20) {
     inputNumber.value = 20;
+  } else if (value < 1) {
+    inputNumber.value = '';
   }
-     else if (value < 1) {
-      inputNumber.value = '';
-    }
 });
 
 function generateRandomNumber(min, max) {
@@ -21,23 +20,23 @@ function generateRandomNumber(min, max) {
 }
 
 function generatePassword() {
-  const passwordLength = document.querySelector("#password-length").value;
+  const passwordLength = document.querySelector('#password-length').value;
 
-  const lowerCaseOption = document.querySelector("#lower-case").checked;
-  const UpperCaseOption = document.querySelector("#upper-case").checked;
-  const symbolsOption = document.querySelector("#symbols").checked;
-  const numbersOption = document.querySelector("#numbers").checked;
+  const lowerCaseOption = document.querySelector('#lower-case').checked;
+  const UpperCaseOption = document.querySelector('#upper-case').checked;
+  const symbolsOption = document.querySelector('#symbols').checked;
+  const numbersOption = document.querySelector('#numbers').checked;
 
   if (lowerCaseOption + UpperCaseOption + symbolsOption + numbersOption == 0) {
-    resultPassword.textContent = "Вы не выбрали ни один параметр";
+    resultPassword.textContent = 'Вы не выбрали ни один параметр';
     return;
   }
   if (passwordLength === '') {
-    resultPassword.textContent = "Введите число от 1 до 20";
+    resultPassword.textContent = 'Введите число от 1 до 20';
     return;
   }
 
-  let result = "";
+  let result = '';
   for (let i = 0; i < passwordLength; i++) {
     const randomNumber = generateRandomNumber(0, 3);
     if (randomNumber === 0 && lowerCaseOption) {
